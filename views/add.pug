@@ -1,0 +1,22 @@
+doctype html
+
+block content 
+    h1=title
+    form(action="/create", name="/create", method="post")
+        div.input
+            span.label username
+            input(type="text", name="username")
+        div.input   
+            span.label  first name 
+            input(type="text", name="firstName")
+        div.input   
+            span.label  last name 
+            input(type="text", name="lastName")    
+        div.input
+            span.label email address:
+            input(type="text", name="email")
+        div.input
+            span.label age
+            input(type="text",name="age")
+        div.actions
+            input(type="submit", value="Submit")

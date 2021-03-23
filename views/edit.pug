@@ -1,0 +1,21 @@
+html
+    head
+    body
+        form(method='post', action='/edit/' + user.username)
+            div
+                label(for='username') Username: 
+                input(id='username', name='username', value=user.username)
+            div
+                label(for='firstName') First Name: 
+                input(id='firstName', name='firstName', value=user.firstname)
+            div
+                label(for='lastName') Last Name: 
+                input(id='lastName', name='lastName', value=user.lastname)
+            div
+                label(for='email') Email: 
+                input(id='email', name='email', value=user.email)
+            div
+                label(for='age') Age: 
+                input(id='age', name='age', value=user.age)
+            div 
+                input(type='submit') 

@@ -1,0 +1,36 @@
+doctype html
+html
+    head 
+        link(rel='stylesheet', href='/styles/style.css')
+    body
+        h2 Simple User Manager
+        
+        table(style='', border='1')
+            tr
+                th Username
+                th First Name 
+                th Last Name
+                th Email
+                th Age
+                th Action
+            each user, u in users
+                tr
+                    td #{user.username}
+                    td #{user.firstname}
+                    td #{user.lastname}
+                    td #{user.email}
+                    td #{user.age}
+                    td 
+                        a(href='/edit/id:' + user.username)
+                            button Edit
+                        form(action="/delete/" + user.username, method='post')
+                            button(type='submit') Delete
+        a(href='/create')
+            button Add User
+        a(href='/sort')
+            button Sort By Age(toggle)
+        a(href='/')
+            button View All
+        form(action='/search/', method='post')
+                input(type='text', id='search', name='search')
+                button(type='submit') Search
