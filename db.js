@@ -52,6 +52,7 @@ const renderAdd = (req, res) => {
 //render end
 
 //Sort and Filter functions
+//sorts by age, relies on age being a number to work properly. There is no validation currently to prevent a user from submitting a NaN age value
 let sorted = false;
 const sort = (req, res) => {
   function compareAsc(a, b) {
